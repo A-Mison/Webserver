@@ -1,58 +1,63 @@
 const express = require('express');
-const app = express();
-const PORT = process.env.PORT || 3000;
+const cors = require('cors');
 
-// Sample data to be used for demonstration
-const personalInfo = {
-    "name": "John Doe",
-    "birthdate": "1990-01-01",
-    "gender": "Male",
-    "contact_no": "123-456-7890",
-    "address": "123 Main St, City, Country"
+const app = express();
+const port = 3000;
+
+// Data for the resume
+const resume = {
+    Personal_Information: [
+        {
+            Name: 'Allen J. Mison',
+            Birthdate: '01/01/2000',
+            Gender: 'Male',
+            Contact_No: '0123456789',
+            Address: '123 Main Street'
+        }
+    ],
+    About_Me: [
+        {
+            Description: "Hello! I'm Allen J. Mison, passionate about Web Development. I enjoy creativity, problem-solving, and maintaining a balanced life. Whether designing, creating, or exploring, I thrive on challenges and value collaboration. Excited about making a positive impact, and looking forward to connecting with you!"
+        }
+    ],
+    Skills: [
+        {
+            Languages: ['html', 'JavaScript', 'React']
+        }
+    ],
+    Education: [
+        {
+            Degree: 'Bachelor of Science',
+            Institution: 'University of XYZ',
+            Year: '2017-2021'
+        }
+    ],
+    Personal_References: [
+        {
+            Name: 'John Doe',
+            Contact_No: '1234567890',
+            Relationship: 'Friend'
+        }
+    ],
+    Work_Experience: [
+        {
+            Company: 'ABC Inc.',
+            Job_Title: 'Front-end Developer',
+            Start_Date: '01/01/2020',
+            End_Date: '01/01/2021'
+        }
+    ]
 };
 
-const skills = [
-    {"description": "Python programming", "expertise_level": "Intermediate"},
-    {"description": "Web development", "expertise_level": "Advanced"}
-];
+// Enable CORS
+app.use(cors());
 
-const education = [
-    {"school": "University of XYZ", "year": "2010-2014"}
-];
-
-const workExperience = [
-    {"company_name": "ABC Inc.", "designation": "Software Engineer", "details": "Developed web applications", "year": "2014-2018"}
-];
-
-const personalReferences = [
-    {"name": "Jane Smith", "relationship": "Colleague", "contact_number": "987-654-3210"}
-];
-
-// Endpoints for accessing personal information
-app.get('/personal_info', (req, res) => {
-    res.json(personalInfo);
+// Route to serve resume data
+app.get('/', (req, res) => {
+    res.json(resume);
 });
 
-// Endpoints for accessing skills
-app.get('/skills', (req, res) => {
-    res.json(skills);
-});
-
-// Endpoints for accessing education
-app.get('/education', (req, res) => {
-    res.json(education);
-});
-
-// Endpoints for accessing work experience
-app.get('/work_experience', (req, res) => {
-    res.json(workExperience);
-});
-
-// Endpoints for accessing personal references
-app.get('/personal_references', (req, res) => {
-    res.json(personalReferences);
-});
-
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+// Start the server
+app.listen(port, () => {
+    console.log(`Server running on port ${port}!`);
 });
