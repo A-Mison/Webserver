@@ -9,10 +9,10 @@ const resume = {
     Personal_Information: [
         {
             Name: 'Allen J. Mison',
-            Birthdate: '01/01/2000',
+            Birthdate: '12/28/2003',
             Gender: 'Male',
-            Contact_No: '0123456789',
-            Address: '123 Main Street'
+            Contact_No: '09567891099',
+            Address: '123 Main Street Cebu City'
         }
     ],
     About_Me: [
@@ -28,23 +28,23 @@ const resume = {
     Education: [
         {
             Degree: 'Bachelor of Science',
-            Institution: 'University of XYZ',
-            Year: '2017-2021'
+            Institution: 'University of Southern Philippines Foundation',
+            Year: '2022-2026'
         }
     ],
     Personal_References: [
         {
-            Name: 'John Doe',
-            Contact_No: '1234567890',
+            Name: 'John Doe Lama',
+            Contact_No: '09553401516',
             Relationship: 'Friend'
         }
     ],
     Work_Experience: [
         {
-            Company: 'ABC Inc.',
+            Company: 'AJM DEVS Incorporated',
             Job_Title: 'Front-end Developer',
-            Start_Date: '01/01/2020',
-            End_Date: '01/01/2021'
+            Start_Date: '01/18/2024',
+            End_Date: '05/20/2025'
         }
     ]
 };
