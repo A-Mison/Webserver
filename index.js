@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-
+const {profile} = require("console");
 const app = express();
 const port = 3000;
 
@@ -13,7 +13,7 @@ const resume = {
             Gender: 'Male',
             Contact_No: '09567891099',
             Address: '123 Main Street Cebu City'
-        }
+        },
     ],
     About_Me: [
         {
@@ -30,8 +30,7 @@ const resume = {
             Degree: 'Bachelor of Science',
             Institution: 'University of Southern Philippines Foundation',
             Year: '2022-2026'
-        }
-        ,
+        },
 
         {
             Degree: 'Bachelor of Science in Social Studies',
