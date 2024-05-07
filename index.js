@@ -26,12 +26,7 @@ const resume = {
         }
     ],
     Education: [
-        {
-            Degree: 'Bachelor of Science',
-            Institution: 'University of Southern Philippines Foundation',
-            Year: '2022-2026'
-        },
-
+    
         {
             Degree: 'Bachelor of Science in Social Studies',
             Institution: 'University of Southern Philippines Foundation 2024',
