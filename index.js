@@ -31,6 +31,11 @@ const resume = {
             Degree: 'Bachelor of Science in Social Studies',
             Institution: 'University of Southern Philippines Foundation 2024',
             Year: '2022-2026'
+        },
+        {
+            Degree: 'Bachelor BAtse',
+            Institution: 'University of Philippines Foundation 2024',
+            Year: '2022-2026'
         }
        
     ],
